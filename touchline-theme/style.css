@@ -1,0 +1,36 @@
+/*
+Theme Name: Touchline Theme
+Theme URI: https://example.com/touchline-theme
+Author: Touchline Team
+Author URI: https://example.com
+Description: A minimal classic WordPress theme skeleton for learning and extension.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: touchline-theme
+Tags: blog, starter, minimal
+*/
+
+/*
+ * This file is required for WordPress to recognize the theme.
+ * Add your custom styles below. The rest of the theme loads this stylesheet.
+ */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+.site-header,
+.site-footer {
+  padding: 2rem;
+  background: #f5f5f5;
+}
+
+.site-content {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+}
