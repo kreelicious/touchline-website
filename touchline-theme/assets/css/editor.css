@@ -1,0 +1,30 @@
+/* Editor styles for Gutenberg parity */
+.editor-styles-wrapper {
+  font-family: var(--wp--preset--font-family--inter, system-ui, -apple-system, "Segoe UI", sans-serif);
+  line-height: 1.65;
+  color: var(--wp--preset--color--text);
+  background-color: var(--wp--preset--color--background);
+  padding: var(--wp--preset--spacing--lg, 2rem);
+}
+
+.editor-styles-wrapper .wp-block {
+  max-width: 960px;
+}
+
+.editor-styles-wrapper a {
+  color: var(--wp--preset--color--green);
+}
+
+.editor-styles-wrapper a:focus,
+.editor-styles-wrapper a:hover {
+  color: var(--wp--preset--color--green-hover);
+}
+
+.editor-styles-wrapper .wp-block-button__link {
+  border-radius: var(--wp--preset--radius--md, 8px);
+}
+
+.editor-styles-wrapper .wp-block-heading {
+  font-family: inherit;
+  line-height: 1.3;
+}

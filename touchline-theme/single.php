@@ -1,6 +1,6 @@
 <?php
 /**
- * Main fallback template.
+ * Template for displaying single posts.
  */
 get_header();
 if (have_posts()) :
@@ -12,7 +12,10 @@ if (have_posts()) :
     </article>
     <?php
   endwhile;
-  the_posts_navigation();
+  the_post_navigation(array(
+    'prev_text' => __('Previous', 'touchline-theme'),
+    'next_text' => __('Next', 'touchline-theme'),
+  ));
 else :
   ?>
   <p><?php esc_html_e('No content found.', 'touchline-theme'); ?></p>

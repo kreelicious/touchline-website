@@ -1,6 +1,6 @@
 <?php
 /**
- * Main fallback template.
+ * Template for displaying pages.
  */
 get_header();
 if (have_posts()) :
@@ -12,10 +12,5 @@ if (have_posts()) :
     </article>
     <?php
   endwhile;
-  the_posts_navigation();
-else :
-  ?>
-  <p><?php esc_html_e('No content found.', 'touchline-theme'); ?></p>
-  <?php
 endif;
 get_footer();

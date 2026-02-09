@@ -1,0 +1,193 @@
+{
+  "version": 2,
+  "settings": {
+    "color": {
+      "defaultPalette": false,
+      "defaultGradients": false,
+      "custom": false,
+      "palette": [
+        {
+          "name": "Touchline Navy",
+          "slug": "navy",
+          "color": "#0E1B2A"
+        },
+        {
+          "name": "Touchline Green",
+          "slug": "green",
+          "color": "#2DBE7B"
+        },
+        {
+          "name": "Touchline Green Hover",
+          "slug": "green-hover",
+          "color": "#27A86D"
+        },
+        {
+          "name": "Text Primary",
+          "slug": "text",
+          "color": "#0E1B2A"
+        },
+        {
+          "name": "Text Muted",
+          "slug": "muted",
+          "color": "#5F6B7A"
+        },
+        {
+          "name": "Border",
+          "slug": "border",
+          "color": "#E3E7EB"
+        },
+        {
+          "name": "Border Strong",
+          "slug": "border-strong",
+          "color": "#D1D7DE"
+        },
+        {
+          "name": "Background",
+          "slug": "background",
+          "color": "#FFFFFF"
+        },
+        {
+          "name": "Background Alt",
+          "slug": "background-alt",
+          "color": "#F4F6F8"
+        },
+        {
+          "name": "Success",
+          "slug": "success",
+          "color": "#2DBE7B"
+        },
+        {
+          "name": "Warning",
+          "slug": "warning",
+          "color": "#F4B740"
+        },
+        {
+          "name": "Error",
+          "slug": "error",
+          "color": "#E5533D"
+        }
+      ]
+    },
+
+    "typography": {
+      "fontFamilies": [
+        {
+          "name": "Inter",
+          "slug": "inter",
+          "fontFamily": "\"Inter\", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif"
+        }
+      ],
+      "fontSizes": [
+        {
+          "name": "Small",
+          "slug": "small",
+          "size": "0.875rem"
+        },
+        {
+          "name": "Base",
+          "slug": "base",
+          "size": "1rem"
+        },
+        {
+          "name": "H3",
+          "slug": "h3",
+          "size": "1.625rem"
+        },
+        {
+          "name": "H2",
+          "slug": "h2",
+          "size": "2.125rem"
+        },
+        {
+          "name": "H1",
+          "slug": "h1",
+          "size": "2.75rem"
+        }
+      ],
+      "lineHeight": true
+    },
+
+    "spacing": {
+      "units": ["px", "rem", "vw"],
+      "spacingSizes": [
+        {
+          "name": "XS",
+          "slug": "xs",
+          "size": "4px"
+        },
+        {
+          "name": "SM",
+          "slug": "sm",
+          "size": "8px"
+        },
+        {
+          "name": "MD",
+          "slug": "md",
+          "size": "16px"
+        },
+        {
+          "name": "LG",
+          "slug": "lg",
+          "size": "24px"
+        },
+        {
+          "name": "XL",
+          "slug": "xl",
+          "size": "32px"
+        }
+      ]
+    },
+
+    "border": {
+      "radius": true,
+      "radiusSizes": [
+        {
+          "name": "Small",
+          "slug": "sm",
+          "size": "6px"
+        },
+        {
+          "name": "Medium",
+          "slug": "md",
+          "size": "8px"
+        }
+      ]
+    }
+  },
+
+  "styles": {
+    "color": {
+      "background": "var(--wp--preset--color--background)",
+      "text": "var(--wp--preset--color--text)"
+    },
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--inter)",
+      "lineHeight": "1.65"
+    },
+    "elements": {
+      "h1": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--h1)",
+          "fontWeight": "700"
+        }
+      },
+      "h2": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--h2)",
+          "fontWeight": "600"
+        }
+      },
+      "h3": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--h3)",
+          "fontWeight": "600"
+        }
+      },
+      "link": {
+        "color": {
+          "text": "var(--wp--preset--color--green)"
+        }
+      }
+    }
+  }
+}

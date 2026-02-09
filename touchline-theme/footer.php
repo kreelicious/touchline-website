@@ -5,16 +5,10 @@
  * Contains the closing of the main content and HTML document.
  */
 ?>
-
-<footer class="site-footer">
-  <p>
-    <?php
-    /* translators: %s: current year. */
-    echo esc_html(sprintf(__('© %s Your Site Name', 'touchline-theme'), date_i18n('Y')));
-    ?>
-  </p>
+</main>
+<footer class="site-footer" role="contentinfo">
+  <p>&copy; <?php echo esc_html(date_i18n('Y')); ?> <?php bloginfo('name'); ?></p>
 </footer>
-
 <?php wp_footer(); ?>
 </body>
 </html>

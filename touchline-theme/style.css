@@ -3,7 +3,7 @@ Theme Name: Touchline Theme
 Theme URI: https://example.com/touchline-theme
 Author: Touchline Team
 Author URI: https://example.com
-Description: A minimal classic WordPress theme skeleton for learning and extension.
+Description: A minimal hybrid WordPress theme skeleton with theme.json styling.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -11,26 +11,118 @@ Text Domain: touchline-theme
 Tags: blog, starter, minimal
 */
 
-/*
- * This file is required for WordPress to recognize the theme.
- * Add your custom styles below. The rest of the theme loads this stylesheet.
- */
+:root {
+  color-scheme: light;
+}
 
 body {
   margin: 0;
-  padding: 0;
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-  line-height: 1.6;
+  font-family: var(--wp--preset--font-family--inter, system-ui, -apple-system, "Segoe UI", sans-serif);
+  font-size: var(--wp--preset--font-size--base, 1rem);
+  line-height: 1.65;
+  color: var(--wp--preset--color--text);
+  background-color: var(--wp--preset--color--background);
 }
 
+main,
 .site-header,
 .site-footer {
-  padding: 2rem;
-  background: #f5f5f5;
+  padding: var(--wp--preset--spacing--lg, 2rem);
 }
 
-.site-content {
+main {
   max-width: 960px;
   margin: 0 auto;
-  padding: 2rem;
+}
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--wp--preset--spacing--md, 1.5rem);
+  border-bottom: 1px solid var(--wp--preset--color--border);
+}
+
+.site-title {
+  font-size: var(--wp--preset--font-size--h2, 2rem);
+  font-weight: 600;
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-description {
+  margin: 0;
+  color: var(--wp--preset--color--muted);
+}
+
+.primary-navigation {
+  width: 100%;
+}
+
+.primary-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--wp--preset--spacing--md, 1.5rem);
+}
+
+.primary-menu a {
+  color: var(--wp--preset--color--navy);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.primary-menu a:focus,
+.primary-menu a:hover {
+  color: var(--wp--preset--color--green-hover);
+}
+
+.site-footer {
+  border-top: 1px solid var(--wp--preset--color--border);
+  color: var(--wp--preset--color--muted);
+}
+
+article + article {
+  margin-top: var(--wp--preset--spacing--xl, 3rem);
+  padding-top: var(--wp--preset--spacing--lg, 2rem);
+  border-top: 1px solid var(--wp--preset--color--border-strong);
+}
+
+.archive-header {
+  margin-bottom: var(--wp--preset--spacing--lg, 2rem);
+}
+
+.skip-link {
+  position: absolute;
+  top: auto;
+  left: -999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  padding: 0.75rem 1rem;
+  background: var(--wp--preset--color--green);
+  color: var(--wp--preset--color--background);
+  text-decoration: none;
+  z-index: 999;
+}
+
+@media (min-width: 768px) {
+  .primary-navigation {
+    width: auto;
+    margin-left: auto;
+  }
+
+  .primary-menu {
+    justify-content: flex-end;
+  }
 }
