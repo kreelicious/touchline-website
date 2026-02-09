@@ -10,6 +10,7 @@ if (!defined('TOUCHLINE_THEME_VERSION')) {
 
 require_once get_theme_file_path('inc/setup.php');
 require_once get_theme_file_path('inc/helpers.php');
+require_once get_theme_file_path('inc/admin-site-settings.php');
 require_once get_theme_file_path('inc/cpt-testimonial.php');
 require_once get_theme_file_path('inc/acf.php');
 require_once get_theme_file_path('inc/shortcodes.php');
