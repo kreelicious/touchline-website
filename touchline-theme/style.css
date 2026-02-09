@@ -1,128 +1,164 @@
 /*
 Theme Name: Touchline Theme
-Theme URI: https://example.com/touchline-theme
-Author: Touchline Team
+Theme URI: https://example.com/touchline
+Author: Touchline
 Author URI: https://example.com
-Description: A minimal hybrid WordPress theme skeleton with theme.json styling.
+Description: Gutenberg-first block theme for Touchline.
 Version: 1.0.0
-License: GNU General Public License v2 or later
+Requires at least: 6.4
+Requires PHP: 8.0
+License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: touchline-theme
-Tags: blog, starter, minimal
+Text Domain: touchline
 */
 
 :root {
-  color-scheme: light;
+  scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  font-family: var(--wp--preset--font-family--inter, system-ui, -apple-system, "Segoe UI", sans-serif);
-  font-size: var(--wp--preset--font-size--base, 1rem);
-  line-height: 1.65;
-  color: var(--wp--preset--color--text);
-  background-color: var(--wp--preset--color--background);
+  text-rendering: optimizeLegibility;
 }
 
-main,
-.site-header,
-.site-footer {
-  padding: var(--wp--preset--spacing--lg, 2rem);
-}
-
-main {
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-.site-header {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--wp--preset--spacing--md, 1.5rem);
-  border-bottom: 1px solid var(--wp--preset--color--border);
-}
-
-.site-title {
-  font-size: var(--wp--preset--font-size--h2, 2rem);
+.is-badge {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
   font-weight: 600;
-  color: inherit;
-  text-decoration: none;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: 1px solid var(--wp--preset--color--border);
+  color: var(--wp--preset--color--text);
+  background: var(--wp--preset--color--surface);
 }
 
-.site-description {
-  margin: 0;
-  color: var(--wp--preset--color--muted);
+.is-badge--primary {
+  background: var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--bg);
+  border-color: var(--wp--preset--color--primary);
 }
 
-.primary-navigation {
-  width: 100%;
+.is-badge--muted {
+  background: var(--wp--preset--color--muted);
+  color: var(--wp--preset--color--bg);
+  border-color: var(--wp--preset--color--muted);
 }
 
-.primary-menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.is-badge--outline {
+  background: transparent;
+  color: var(--wp--preset--color--text);
+}
+
+.is-alert {
+  border-radius: var(--wp--preset--radius--md);
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--wp--preset--color--border);
+  background: var(--wp--preset--color--surface);
+}
+
+.is-alert--info {
+  border-color: color-mix(in srgb, var(--wp--preset--color--primary) 30%, var(--wp--preset--color--border));
+  background: color-mix(in srgb, var(--wp--preset--color--primary) 12%, var(--wp--preset--color--surface));
+}
+
+.is-alert--success {
+  border-color: color-mix(in srgb, var(--wp--preset--color--success) 30%, var(--wp--preset--color--border));
+  background: color-mix(in srgb, var(--wp--preset--color--success) 12%, var(--wp--preset--color--surface));
+}
+
+.is-alert--warn {
+  border-color: color-mix(in srgb, var(--wp--preset--color--warning) 30%, var(--wp--preset--color--border));
+  background: color-mix(in srgb, var(--wp--preset--color--warning) 12%, var(--wp--preset--color--surface));
+}
+
+.is-alert--error {
+  border-color: color-mix(in srgb, var(--wp--preset--color--error) 30%, var(--wp--preset--color--border));
+  background: color-mix(in srgb, var(--wp--preset--color--error) 12%, var(--wp--preset--color--surface));
+}
+
+.touchline-card {
+  border: 1px solid var(--wp--preset--color--border);
+  border-radius: var(--wp--preset--radius--lg);
+  padding: 1.5rem;
+  background: var(--wp--preset--color--surface);
+  box-shadow: 0 12px 30px -24px rgba(15, 23, 42, 0.45);
+}
+
+.touchline-icon-placeholder {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.75rem;
+  background: color-mix(in srgb, var(--wp--preset--color--accent) 30%, var(--wp--preset--color--surface));
+  color: var(--wp--preset--color--text);
+  font-weight: 700;
+}
+
+.touchline-slider {
+  position: relative;
+}
+
+.touchline-slider__track {
   display: flex;
-  flex-wrap: wrap;
-  gap: var(--wp--preset--spacing--md, 1.5rem);
-}
-
-.primary-menu a {
-  color: var(--wp--preset--color--navy);
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.primary-menu a:focus,
-.primary-menu a:hover {
-  color: var(--wp--preset--color--green-hover);
-}
-
-.site-footer {
-  border-top: 1px solid var(--wp--preset--color--border);
-  color: var(--wp--preset--color--muted);
-}
-
-article + article {
-  margin-top: var(--wp--preset--spacing--xl, 3rem);
-  padding-top: var(--wp--preset--spacing--lg, 2rem);
-  border-top: 1px solid var(--wp--preset--color--border-strong);
-}
-
-.archive-header {
-  margin-bottom: var(--wp--preset--spacing--lg, 2rem);
-}
-
-.skip-link {
-  position: absolute;
-  top: auto;
-  left: -999px;
-  width: 1px;
-  height: 1px;
   overflow: hidden;
+  scroll-behavior: smooth;
 }
 
-.skip-link:focus {
-  left: 1rem;
-  top: 1rem;
-  width: auto;
-  height: auto;
-  padding: 0.75rem 1rem;
-  background: var(--wp--preset--color--green);
-  color: var(--wp--preset--color--background);
-  text-decoration: none;
-  z-index: 999;
+.touchline-slider__slide {
+  flex: 0 0 100%;
+  padding: 0 0.5rem;
 }
 
-@media (min-width: 768px) {
-  .primary-navigation {
-    width: auto;
-    margin-left: auto;
-  }
+.touchline-slider__controls {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
 
-  .primary-menu {
-    justify-content: flex-end;
-  }
+.touchline-slider__dots {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.touchline-slider__dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--wp--preset--color--border);
+  background: transparent;
+}
+
+.touchline-slider__dot[aria-current="true"] {
+  background: var(--wp--preset--color--primary);
+  border-color: var(--wp--preset--color--primary);
+}
+
+.touchline-form {
+  border: 1px solid var(--wp--preset--color--border);
+  border-radius: var(--wp--preset--radius--lg);
+  padding: 1.5rem;
+  background: var(--wp--preset--color--surface);
+}
+
+.touchline-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.touchline-form__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.touchline-form__note {
+  font-size: 0.85rem;
+  color: var(--wp--preset--color--muted);
 }
