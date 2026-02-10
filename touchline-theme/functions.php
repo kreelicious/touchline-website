@@ -14,6 +14,7 @@ add_action('after_setup_theme', function (): void {
 });
 
 add_action('wp_enqueue_scripts', function (): void {
+    wp_enqueue_style('touchline-fonts', 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap', [], null);
     wp_enqueue_style('touchline-style', get_stylesheet_uri(), [], wp_get_theme()->get('Version'));
 });
 
