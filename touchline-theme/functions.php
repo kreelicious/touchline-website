@@ -15,12 +15,29 @@ add_action('after_setup_theme', function (): void {
 
 add_action('wp_enqueue_scripts', function (): void {
     wp_enqueue_style('touchline-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap', [], null);
-    wp_enqueue_style('touchline-style', get_stylesheet_uri(), [], wp_get_theme()->get('Version'));
+
+    $style_dependencies = [];
+    $tailwind_css_path = get_theme_file_path('assets/css/tailwind.css');
+
+    if (file_exists($tailwind_css_path)) {
+        $tailwind_css_version = (string) filemtime($tailwind_css_path);
+        wp_enqueue_style('touchline-tailwind', get_theme_file_uri('assets/css/tailwind.css'), [], $tailwind_css_version);
+        $style_dependencies[] = 'touchline-tailwind';
+    }
+
+    wp_enqueue_style('touchline-style', get_stylesheet_uri(), $style_dependencies, wp_get_theme()->get('Version'));
 });
 
 
 add_action('enqueue_block_editor_assets', function (): void {
     wp_enqueue_style('touchline-editor-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap', [], null);
+
+    $tailwind_css_path = get_theme_file_path('assets/css/tailwind.css');
+
+    if (file_exists($tailwind_css_path)) {
+        $tailwind_css_version = (string) filemtime($tailwind_css_path);
+        wp_enqueue_style('touchline-tailwind-editor', get_theme_file_uri('assets/css/tailwind.css'), [], $tailwind_css_version);
+    }
 });
 
 add_action('init', function (): void {
