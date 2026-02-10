@@ -178,3 +178,37 @@ body {
   font-weight: 600;
 }
 
+
+/* Typography fallback to enforce heading hierarchy and body copy font choices */
+h1,
+h2,
+h3,
+h4,
+.wp-block-heading {
+  font-family: "Poppins", "Inter", system-ui, sans-serif;
+}
+
+h1 {
+  font-size: 3.25rem;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 2rem;
+  line-height: 1.25;
+}
+
+h4 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+p {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 1rem;
+}
