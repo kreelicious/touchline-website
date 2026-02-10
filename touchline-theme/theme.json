@@ -165,5 +165,12 @@
         "color": { "background": "var(--wp--preset--color--border)" }
       }
     }
-  }
+  },
+  "customTemplates": [
+    {
+      "name": "primary",
+      "title": "Primary Full Width",
+      "postTypes": ["page", "post"]
+    }
+  ]
 }
