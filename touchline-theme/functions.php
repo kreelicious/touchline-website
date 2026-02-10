@@ -26,6 +26,18 @@ add_action('wp_enqueue_scripts', function (): void {
     }
 
     wp_enqueue_style('touchline-style', get_stylesheet_uri(), $style_dependencies, wp_get_theme()->get('Version'));
+
+    $navigation_script_path = get_theme_file_path('assets/js/navigation.js');
+
+    if (file_exists($navigation_script_path)) {
+        wp_enqueue_script(
+            'touchline-navigation',
+            get_theme_file_uri('assets/js/navigation.js'),
+            [],
+            (string) filemtime($navigation_script_path),
+            true
+        );
+    }
 });
 
 
