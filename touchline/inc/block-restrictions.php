@@ -19,7 +19,8 @@ add_filter('allowed_block_types_all', function ($allowed, $editor_context) {
       'core/image',
       'core/columns',
       'core/column',
-      'core/separator'
+      'core/separator',
+      'core/details'
     ];
   }
 
@@ -34,7 +35,8 @@ add_filter('allowed_block_types_all', function ($allowed, $editor_context) {
       'core/embed',
       'core/buttons',
       'core/button',
-      'core/separator'
+      'core/separator',
+      'core/details'
     ];
   }
 
