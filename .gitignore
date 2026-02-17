@@ -1,26 +1,6 @@
-# Node / frontend
 node_modules/
-.pnpm-store/
-.yarn/
-.yarn-cache/
-
-# Logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-*.log
-
-# OS / editor
+vendor/
 .DS_Store
-Thumbs.db
-.vscode/
-.idea/
-
-# Env files
 .env
-.env.*
-
-# Build output
-/dist/
-/build/
+dist/
+*.zip

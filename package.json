@@ -1,0 +1,8 @@
+{
+  "name": "touchline-marketing-site",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "lint": "echo \"Add JS/CSS linting when build pipeline is chosen\""
+  }
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<ruleset name="Touchline">
+  <description>PHPCS rules for Touchline theme scaffold.</description>
+  <file>theme/touchline</file>
+  <arg name="colors"/>
+  <arg value="p"/>
+  <rule ref="PSR12"/>
+</ruleset>

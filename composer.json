@@ -1,0 +1,11 @@
+{
+  "name": "touchline/marketing-site",
+  "description": "Touchline marketing site block theme scaffold",
+  "type": "project",
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.10"
+  },
+  "scripts": {
+    "lint:php": "phpcs -p"
+  }
+}
