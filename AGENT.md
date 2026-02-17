@@ -1,6 +1,14 @@
 # AGENT.md  
 Touchline Marketing Website — Development Agent Rules
 
+## Canonical Specification
+
+The authoritative design and UI specification lives in:
+
+/docs/spec/design-system.md
+
+All tokens, typography, spacing, component rules, and UI behaviour must match that document.
+If a rule is unclear, do not invent one — flag it.
 ---
 
 ## 1. Project Context
